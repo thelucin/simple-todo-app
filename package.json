@@ -1,6 +1,5 @@
 {
   "name": "simple-todo-app",
-  "author": "Evgeniy Sobolev <evgenij.sobolew@gmail.com>",
   "private": true,
   "version": "0.0.0",
   "type": "module",
