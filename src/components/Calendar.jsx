@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
-import {
-  MagnifyingGlassIcon,
-  CaretLeftIcon,
-  CaretRightIcon,
-} from "@phosphor-icons/react";
+import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 import { DayItem } from "./DayItem";
-import { Space } from "./Space";
 
 export const Calendar = ({ selectedDate, onDateChange }) => {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -58,7 +53,7 @@ export const Calendar = ({ selectedDate, onDateChange }) => {
         })}
       </div>
 
-      <div className="flex items-center justify-center relative self-stretch w-full flex-[0_0_auto]">
+      <div className="flex-1 justify-center relative self-stretch w-full">
         <div className="relative w-fit mt-[-1.00px] font-black text-primary text-2xl tracking-normal">
           {isToday(selectedDate)
             ? "Today"
@@ -67,11 +62,9 @@ export const Calendar = ({ selectedDate, onDateChange }) => {
                 day: "numeric",
               })}
         </div>
-        <Space />
-        <MagnifyingGlassIcon size={18} className="relative" />
       </div>
 
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full select-none">
         <button
           onClick={prevWeek}
           onFocus={() => setFocusedArrow("left")}

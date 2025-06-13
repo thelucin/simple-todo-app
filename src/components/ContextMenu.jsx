@@ -33,7 +33,7 @@ export const ContextMenu = ({ items, taskId, children }) => {
             position: "fixed",
             top: position.y,
             left: position.x,
-            backgroundColor: "white",
+            backgroundColor: "var(--color-bg)",
             border: "1px solid #ccc",
             borderRadius: "4px",
             boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
