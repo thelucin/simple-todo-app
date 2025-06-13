@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --font-primary: "Inter", sans-serif;
+        --color-bg: #ffffff;
+        --color-primary: #000000;
+        --color-secondary: #8e8e8e;
+        --color-accent: #3672ea;
+    }
+
+    body {
+        font-family: var(--font-primary);
+        font-weight: 400; /* Regular по умолчанию */
+    }
+
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+
+    .bg-bg {
+        background-color: var(--color-bg);
+    }
+
+    .bg-accent {
+        background-color: var(--color-accent);
+    }
+
+    .border-secondary {
+        border-color: var(--color-secondary);
+    }
+}
