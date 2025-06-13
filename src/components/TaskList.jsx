@@ -1,32 +1,15 @@
 import { TaskItem } from "./TaskItem";
 
-export const TaskList = () => {
-  const tasks = [
-    {
-      completed: true,
-      text: "Meeting with Anna",
-      time: "6:30 PM",
-    },
-    {
-      completed: false,
-      text: "Meeting with Anna",
-      time: "6:29 PM",
-    },
-    {
-      completed: true,
-      text: "Meeting with Anna",
-      time: "6:28 PM",
-    },
-  ];
-
+export const TaskList = ({ tasks, onTaskToggle }) => {
   return (
     <div className="flex flex-col items-start gap-1 relative self-stretch w-full flex-[0_0_auto]">
-      {tasks.map((task, index) => (
+      {tasks.map((task) => (
         <TaskItem
-          key={index}
+          key={task.id}
           completed={task.completed}
           text={task.text}
           time={task.time}
+          onToggle={() => onTaskToggle(task.id)}
         />
       ))}
     </div>
